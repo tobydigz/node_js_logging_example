@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-const addRequestId = require('express-request-id');
+const addRequestId = require('express-request-id')();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
