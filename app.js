@@ -52,7 +52,10 @@ app.use((req, res, next) => {
     function afterResponse() {
         res.removeListener('finish', afterResponse);
         res.removeListener('close', afterResponse);
-        logger.loggerInstance.info({res:res}, 'tobi')
+        var log = logger.loggerInstance.child({
+            id: req.id
+        }, true)
+       log.info({res:res}, 'response')
     }
 
     res.on('finish', afterResponse);
