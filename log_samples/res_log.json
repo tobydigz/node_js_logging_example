@@ -1,0 +1,13 @@
+{
+    "name": "transaction-notifier",
+    "hostname": "Oloruntobis-MacBook-Pro.local",
+    "pid": 57523,
+    "level": 30,
+    "res": {
+        "statusCode": 200,
+        "header": "HTTP/1.1 200 OK\r\nX-Powered-By: Express\r\nX-Request-Id: 9e83cc87-8985-4555-8a9c-b530e60d77f6\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: 25\r\nETag: W/\"19-YADcV/UbjuqAkEhoa7T21Md4aNM\"\r\nDate: Tue, 10 Apr 2018 12:52:39 GMT\r\nConnection: keep-alive\r\n\r\n"
+    },
+    "msg": "tobi",
+    "time": "2018-04-10T12:52:39.637Z",
+    "v": 0
+}

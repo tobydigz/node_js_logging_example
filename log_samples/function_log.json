@@ -1,0 +1,14 @@
+{
+    "name": "transaction-notifier",
+    "hostname": "Oloruntobis-MacBook-Pro.local",
+    "pid": 57523,
+    "id": "9e83cc87-8985-4555-8a9c-b530e60d77f6",
+    "body": {
+        "fullname": "tobi allen"
+    },
+    "statusCode": 200,
+    "level": 30,
+    "msg": "response",
+    "time": "2018-04-10T12:52:39.633Z",
+    "v": 0
+}

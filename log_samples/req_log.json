@@ -1,0 +1,31 @@
+{
+    "name": "transaction-notifier",
+    "hostname": "Oloruntobis-MacBook-Pro.local",
+    "pid": 57523,
+    "id": "9e83cc87-8985-4555-8a9c-b530e60d77f6",
+    "body": {
+        "firstname": "tobi",
+        "lastname": "allen"
+    },
+    "level": 30,
+    "req": {
+        "method": "POST",
+        "url": "/stuff",
+        "headers": {
+            "content-type": "application/json",
+            "cache-control": "no-cache",
+            "postman-token": "42235a5e-7909-469e-a063-bef5e23ac91c",
+            "user-agent": "PostmanRuntime/7.1.1",
+            "accept": "*/*",
+            "host": "localhost:8081",
+            "accept-encoding": "gzip, deflate",
+            "content-length": "44",
+            "connection": "keep-alive"
+        },
+        "remoteAddress": "::1",
+        "remotePort": 59223
+    },
+    "msg": "",
+    "time": "2018-04-10T12:52:39.632Z",
+    "v": 0
+}
