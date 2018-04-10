@@ -4,6 +4,7 @@ const app = express();
 
 const addRequestId = require('express-request-id')();
 const morgan = require('morgan');
+const logger = require('./logger')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -36,11 +37,36 @@ app.use(morgan(loggerFormat, {
     stream: process.stdout
 }));
 
+app.use((req, res, next) => {
+    var log = logger.loggerInstance.child({
+      id: req.id,
+      body: req.body
+    }, true)
+    log.info({
+      req: req
+    })
+    next();
+  });
+
+  app.use(function (req, res, next) {
+    function afterResponse() {
+        res.removeListener('finish', afterResponse);
+        res.removeListener('close', afterResponse);
+        var log = logger.loggerInstance.info({res:res}, 'tobi')
+    }
+
+    res.on('finish', afterResponse);
+    res.on('close', afterResponse);
+});
+
+
+
 app.post("/stuff", function (req, res) {
 
     var response = {
         fullname: `${req.body.firstname} ${req.body.lastname}`
     }
+    logger.logResponse(req.id, response, 200);
     res.status(200).send(response);
 });
 
