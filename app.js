@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
+const addRequestId = require('express-request-id');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
@@ -10,6 +12,8 @@ app.use(bodyParser.urlencoded({
 app.get("/health", function (req, res) {
     res.status(200).send();
 });
+
+app.use(addRequestId);
 
 app.post("/stuff", function (req, res) {
 
