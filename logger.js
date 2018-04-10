@@ -7,7 +7,14 @@ exports.loggerInstance = bunyan.createLogger({
         res: bunyan.stdSerializers.res,
         err: bunyan.stdSerializers.err
     },
-    level: 'info'
+    level: 'info',
+    streams: [{
+            path: './foo.log',
+        },
+        {
+            stream: process.stdout
+        }
+    ]
 });
 
 exports.logResponse = function (id, body, statusCode) {
